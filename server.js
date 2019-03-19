@@ -18,14 +18,15 @@ const PORT = process.env.PORT || 3000;
 // Database
 // ___________________
 // How to connect to the database either via heroku or locally
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/' + 'snackz';
+// const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/' + 'snackz';
+const mongoURI = process.env.MONGOLAB_CYAN_URI || 'mongodb://localhost:27017/' + 'snackz';
 
 // Connect to Mongo
-mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
+mongoose.connect(mongoURI, { useNewUrlParser: true });
 
 // Error / success
 db.on('error', (err) => console.log(err.message + ' is Mongod not running?'));
-db.on('connected', () => console.log('mongo connected: ', MONGODB_URI));
+db.on('connected', () => console.log('mongo connected: ', mongoURI));
 db.on('disconnected', () => console.log('mongo disconnected'));
 
 // open the connection to mongo
