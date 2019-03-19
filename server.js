@@ -3,6 +3,7 @@
 // ___________________
 // require('dotenv').config()
 const express = require('express');
+// const Snack = require('./models/snackz.js');
 const methodOverride = require('method-override');
 const mongoose = require('mongoose');
 const app = express();
@@ -33,25 +34,55 @@ db.on('open', () => {});
 // ___________________
 // Middleware
 // ___________________
-
-// use public folder for static assets
 app.use(express.static('public'));
 
-// populates req.body with parsed info from forms - if no data from forms will return an empty object {}
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
+
 app.use(express.json());
 
-//use method override
 app.use(methodOverride('_method'))
 
 // ___________________
-// Route
+// Routes
 // ___________________
-// localhost:3000
-app.get('/snackz/new', (req, res) => {
-  res.send('new.ejs');
+
+// ___________________
+// SEED route
+
+// ___________________
+// delete route
+
+// ___________________
+// edit route
+
+// ___________________
+// put route
+
+// ___________________
+// index route
+app.get('/snackz/', (req, res) => {
+  res.render('index.ejs');
 });
 
+// ___________________
+// new route
+app.get('/snackz/new', (req, res) => {
+  res.render('new.ejs');
+});
+
+// ___________________
+// show route
+
+// create route
+// app.post('/snackz/', (req, res) => {
+//   console.log('received');
+//   res.send('received');
+// });
+
+//   Snack.create(req.body, (error, createdSnack) => {
+//       res.send(createdSnack);
+//   })
+// });
 // ___________________
 // Listener
 // ___________________
