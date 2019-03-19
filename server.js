@@ -125,7 +125,11 @@ app.get('/snackz/:id/edit', (req, res)=>{
 });
 // ___________________
 // put route
-
+app.put('/snackz/:id', (req, res) => {
+  Snack.findByIdAndUpdate(req.params.id, req.body, { new:true }, (err, updatedSnack) => {
+    res.redirect('/snackz');
+  });
+});
 // ___________________
 // index route
 app.get('/snackz', (req, res) => {
@@ -145,7 +149,7 @@ app.get('/snackz/new', (req, res) => {
 // ___________________
 // show route
 app.get('/snackz/:id', (req, res) => {
-  Snack.findById(req.params.id, (err, foundSnack)=>{
+  Snack.findById(req.params.id, (err, foundSnack) => {
     res.render('show.ejs', {
       snack: foundSnack
     });

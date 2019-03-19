@@ -6,12 +6,13 @@
   </head>
   <body>
     <h1>Edit Snack Page</h1>
-    <form>
+    <form  action="/snackz/<%=snacks.id%>?_method=PUT" method="POST">
     Snacker: <input type="text" name="snacker" value="<%=snacks.snakcker%>" /><br/>
     Snack: <input type="text" name="snack" value="<%=snacks.snack%>"/><br/>
     Continent: <input type="text" name="continent" value="<%=snacks.continent%>"/><br/>
     Description: <input type="text" name="description" value="<%=snacks.description%>"/><br/>
     Pic: <input type="src" alt="you can't see me" name="image" value="<%=snacks.image%>"/><br/>
+    <input type="submit">
     </form>
   </body>
 </html>
