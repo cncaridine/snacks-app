@@ -6,5 +6,15 @@
   </head>
   <body>
     <h1>All Snackz Page</h1>
+    <ul>
+      <% for(let i = 0; i < snacks.length; i++) { %>
+          <li>
+              <a href="/snackz/<%=i%>"><%=snacks[i].snack %></a>
+          </li>
+      <% } %>
+    </ul>
+    <nav>
+    <a href="/snackz/new">Create a New Snack</a>
+</nav>
   </body>
 </html>

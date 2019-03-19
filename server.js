@@ -3,7 +3,7 @@
 // ___________________
 // require('dotenv').config()
 const express = require('express');
-// const Snack = require('./models/snackz.js');
+const Snack = require('./models/snackz.js');
 const methodOverride = require('method-override');
 const mongoose = require('mongoose');
 const app = express();
@@ -60,8 +60,12 @@ app.use(methodOverride('_method'))
 
 // ___________________
 // index route
-app.get('/snackz/', (req, res) => {
-  res.render('index.ejs');
+app.get('/snackz', (req, res) => {
+  Snack.find({}, (error, allSnackz) => {
+    res.render('index.ejs', {
+      snacks: allSnackz
+    });
+  });
 });
 
 // ___________________
@@ -72,17 +76,20 @@ app.get('/snackz/new', (req, res) => {
 
 // ___________________
 // show route
+app.get('/snackz/:id', (req, res) => {
+  Snack.findById(req.params.id, (err, foundSnack)=>{
+    res.render('show.ejs', {
+      snack: foundSnack
+    });
+  });
+});
 
 // create route
-// app.post('/snackz/', (req, res) => {
-//   console.log('received');
-//   res.send('received');
-// });
-
-//   Snack.create(req.body, (error, createdSnack) => {
-//       res.send(createdSnack);
-//   })
-// });
+app.post('/snackz/', (req, res) => {
+  Snack.create(req.body, (error, createdSnack) => {
+      res.send(createdSnack);
+  })
+});
 // ___________________
 // Listener
 // ___________________
