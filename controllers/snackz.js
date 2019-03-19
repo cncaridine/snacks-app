@@ -108,7 +108,7 @@ router.get('/new', (req, res) => {
 // ___________________
 // show route
 router.get('/:id', (req, res) => {
-  Snack.findById(req.params.id, (err, foundSnack) => {
+  Snack.findById(req.params.id, (error, foundSnack) => {
     res.render('show.ejs', {
       snack: foundSnack
     });
