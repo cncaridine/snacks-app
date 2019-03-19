@@ -1,6 +1,7 @@
 // ___________________
 // Dependencies
 // ___________________
+// require('dotenv').config()
 const express = require('express');
 const methodOverride = require('method-override');
 const mongoose = require('mongoose');
@@ -43,13 +44,12 @@ app.use(express.json());
 //use method override
 app.use(methodOverride('_method'))
 
-
 // ___________________
-// Routes
+// Route
 // ___________________
 // localhost:3000
-app.get('/' , (req, res) => {
-  res.send('What up, joe?!');
+app.get('/snackz/new', (req, res) => {
+  res.send('new.ejs');
 });
 
 // ___________________

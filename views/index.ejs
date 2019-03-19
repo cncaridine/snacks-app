@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>All Snackz Page</h1>
+    <ul>
+      <% for(let i = 0; i < allSnackz.length; i++) { %>
+          <li>
+              <a href="/snackz/<%=i%>"><%=allSnackz[i].snack %></a>
+          </li>
+      <% } %>
+    </ul>
+  </body>
+</html>
