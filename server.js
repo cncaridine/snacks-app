@@ -113,7 +113,16 @@ app.delete('/snackz/:id', (req, res)=>{
 });
 // ___________________
 // edit route
-
+app.get('/snackz/:id/edit', (req, res)=>{
+    Snack.findById(req.params.id, (err, foundSnack)=>{
+        res.render(
+    		'edit.ejs',
+    		{
+    			snacks: foundSnack
+    		}
+    	);
+    });
+});
 // ___________________
 // put route
 
