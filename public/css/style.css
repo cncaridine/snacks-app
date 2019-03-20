@@ -28,6 +28,12 @@ p, h5 {
   padding-top: 90px;
 }
 
+.index-pic {
+  background-color: purple;
+  border-style: solid;
+  border-radius: 25px;
+}
+
 .create-new {
   background-color: blue;
 }

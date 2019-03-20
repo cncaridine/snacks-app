@@ -11,14 +11,18 @@
     </form>
     <div class="index-container">
       <h1>All Snackz Page</h1>
-      <ul>
-        <% for(let i = 0; i < snacks.length; i++) { %>
-            <li>
-              <a href="/snackz/<%=snacks[i]._id%>"><%=snacks[i].continent %></a></br>
-              <img class="contentPic" src="<%=snacks[i].img%>" alt="you cannot see the snack"></br>
-            </li>
-        <% } %>
-      </ul>
+      <div class="row">
+        <div class="col s12">
+          <ul>
+            <% for(let i = 0; i < snacks.length; i++) { %>
+                <li class="index-pic">
+                  <a href="/snackz/<%=snacks[i]._id%>"><%=snacks[i].continent %></a></br>
+                  <img class="circle responsive-img" id="contentPic" src="<%=snacks[i].img%>" alt="you cannot see the snack"></br>
+                </li>
+            <% } %>
+          </ul>
+        </div>
+      </div>
     </div>
     <nav class="create-new">
       <a href="/snackz/new">Create a New Snack</a>

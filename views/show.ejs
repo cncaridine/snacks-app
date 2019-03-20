@@ -10,16 +10,17 @@
       </div>
     </form>
       <div class="show-card-container">
-        <h1>Snackz Show Page</h1>
+        <h1>Snackz on Snacks</h1>
+        <h5><%=snack.snacker%>'s Snackz</h5>
         <div class="center-align">
           <div class="card large">
             <div class="card-image">
               <img src="<%=snack.img%>" alt="you cannot see the snack"></br>
-              <span class="card-title grey-text text-darken-4"><%=snack.snacker%></br></br></span>
+              <span class="card-title grey-text text-darken-4"><%=snack.continent%></br></br></span>
             </div>
             <div class="card-content">
-                Continent: <%=snack.continent%>
-                Snack: <%=snack.snack%> </br>
+                <!-- Continent: <%=snack.continent%></br> -->
+                Snack: <%=snack.snack%></br>
                 Description: <%=snack.description%></br>
                 <!-- Snacker: <%=snack.snacker%></br> -->
               <% if (snack.like > 0) { %>
