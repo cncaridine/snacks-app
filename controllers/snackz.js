@@ -82,6 +82,15 @@ router.get('/:id/edit', (req, res)=>{
     	);
     });
 });
+
+// BUY Route
+// ------------------
+router.put('/buy/:id', (req, res) => {
+  Snack.findByIdAndUpdate(req.params.id, { $inc: { like: +1 } }, { new: true }, (err, likeSnack) => {
+    res.redirect('/snackz')
+  })
+})
+
 // ___________________
 // put route
 router.put('/:id', (req, res) => {

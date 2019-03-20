@@ -13,6 +13,18 @@
           Description: <%=snack.description%></br>
         </li>
       </ul>
+      <!--buy button  -->
+      <% if (snack.like > 0) { %>
+        <form action="/snackz/like/<%=snack._id;%>?_method=PUT" method="POST">
+              <input type="submit" value="LIKE">
+        </form>
+          <% } else { %>
+          Be the first to like!
+        <% } %>
+      <form action="/snackz/<%=snack._id; %>?_method=DELETE" method="POST">
+        <input type="submit" value="DELETE"/>
+      </form>
+      <a href="/snackz/<%=snack.id; %>/edit">Edit</a>
     </div>
   </body>
 </html>

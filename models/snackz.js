@@ -6,7 +6,8 @@ const SnackzSchema = new mongoose.Schema({
   snack: { type: String },
   continent: { type: String },
   description: { type: String, max: 300 },
-  img: { type: String }
+  img: { type: String },
+  like: { type: Number, min: 0}
 })
 
 // snackz model
