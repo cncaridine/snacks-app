@@ -119,7 +119,7 @@ router.get('/:id', (req, res) => {
 // create route
 router.post('/', (req, res) => {
   Snack.create(req.body, (err, createdSnack) => {
-      res.send(createdSnack);
+      res.redirect('/snackz');
   })
 });
 
