@@ -26,12 +26,20 @@ p, h5 {
 }
 .index-container {
   padding-top: 90px;
+  /* display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; */
 }
 
-.index-pic {
+#index-pic {
   background-color: purple;
   border-style: solid;
   border-radius: 25px;
+  width: 250px;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
 }
 
 .create-new {

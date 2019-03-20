@@ -9,24 +9,25 @@
         <i class="material-icons">close</i>
       </div>
     </form>
-    <div class="index-container">
-      <h1>All Snackz Page</h1>
-      <div class="row">
+    <nav class="create-new">
+      <a href="/snackz/new">Create a New Snack</a>
+    </nav>
+    <div class="center-align" id="index-container">
+      <h5>Eat a Snack. Drink a Snack. Be a Snack.</h5>
+      <div class="display">
         <div class="col s12">
           <ul>
             <% for(let i = 0; i < snacks.length; i++) { %>
                 <li class="index-pic">
-                  <a href="/snackz/<%=snacks[i]._id%>"><%=snacks[i].continent %></a></br>
-                  <img class="circle responsive-img" id="contentPic" src="<%=snacks[i].img%>" alt="you cannot see the snack"></br>
+                  <!-- <a href="/snackz/<%=snacks[i]._id%>"><%=snacks[i].continent %></a> -->
+                  <a href="/snackz/<%=snacks[i]._id%>">
+                  <img class="circle responsive-img hoverable" id="contentPic" src="<%=snacks[i].img%>" alt="you cannot see the snack"></a></br>
                 </li>
             <% } %>
           </ul>
         </div>
       </div>
     </div>
-    <nav class="create-new">
-      <a href="/snackz/new">Create a New Snack</a>
-    </nav>
   </body>
   <footer class="page-footer">
       <div class="container">
