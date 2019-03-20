@@ -3,18 +3,20 @@
    <% include ../partials/head.ejs %>
   <body>
     <h1>All Snackz Page</h1>
-    <ul>
-      <% for(let i = 0; i < snacks.length; i++) { %>
-          <li>
-            <a href="/snackz/<%=snacks[i]._id%>"><%=snacks[i].continent %></a></br>
-            <img class="contentPic" src="<%=snacks[i].img%>" alt="you cannot see the snack"></br>
-            <form action="/snackz/<%=snacks[i].id; %>?_method=DELETE" method="POST">
-              <input type="submit" value="DELETE"/>
-            </form>
-            <a href="/snackz/<%=snacks[i].id; %>/edit">Edit</a>
-          </li>
-      <% } %>
-    </ul>
+    <div>
+      <ul>
+        <% for(let i = 0; i < snacks.length; i++) { %>
+            <li>
+              <a href="/snackz/<%=snacks[i]._id%>"><%=snacks[i].continent %></a></br>
+              <img class="contentPic" src="<%=snacks[i].img%>" alt="you cannot see the snack"></br>
+              <form action="/snackz/<%=snacks[i].id; %>?_method=DELETE" method="POST">
+                <input type="submit" value="DELETE"/>
+              </form>
+              <a href="/snackz/<%=snacks[i].id; %>/edit">Edit</a>
+            </li>
+        <% } %>
+      </ul>
+    </div>
     <nav>
     <a href="/snackz/new">Create a New Snack</a>
 </nav>
