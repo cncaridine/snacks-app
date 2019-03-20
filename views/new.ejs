@@ -2,14 +2,47 @@
 <html>
    <% include ../partials/head.ejs %>
   <body>
-    <h1>New Snackz Page</h1>
-    <form action="/snackz" method="POST">
-    Snacker: <input type="text" name="snacker" value="" placeholder="enter your handle"/><br/>
-    Snack: <input type="text" name="snack" value="" placeholder="what is the snack"/><br/>
-    Continent: <input type="text" name="continent" value="" placeholder="what continent"/><br/>
-    Description: <input type="text" name="description" value="" placeholder="deets please" /><br/>
-    Pic: <input type="text" alt="you can't see me" name="img" value="" placeholder="upload pic"><br/>
-    <input type="submit" name="" value"Submit Snack">
-    </form>
+    <div class="new-container">
+      <div class="new-form">
+        <h1>New Snackz Page</h1>
+        <form action="/snackz" method="POST">
+        Snacker: <input type="text" name="snacker" value="" placeholder="enter your handle"/><br/>
+        Snack: <input type="text" name="snack" value="" placeholder="what is the snack"/><br/>
+        Continent: <input type="text" name="continent" value="" placeholder="where on the globe"/><br/>
+        Description: <input type="text" name="description" value="" placeholder="deets please" /><br/>
+        Pic: <input type="text" alt="you can't see me" name="img" value="" placeholder="upload pic"><br/>
+        <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+          <i class="material-icons right">send</i>
+        </button>
+        </form>
+      </div>
+    </div>
   </body>
+  <footer class="page-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">More from Snackz on Snacks</h5>
+              <p class="grey-text text-lighten-4">Make sure you're not left out from all things snackz on snacks. </p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Links</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="#!">Pod Cast</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Events </a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Join Team</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Contact Us</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Next Snack Highlight</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Next Destination</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+          © 2019 Copyright Text
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+        </div>
+      </div>
+  </footer>
 </html>
