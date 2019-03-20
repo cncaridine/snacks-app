@@ -13,10 +13,24 @@ img {
   width: 45%;
 }
 
+h1 {
+  font-family: 'Luckiest Guy', cursive;
+}
+
+a {
+  font-family: 'Concert One', cursive;
+}
+
+p, h5 {
+  font-family: 'Poiret One', cursive;
+}
+.index-container {
+  padding-top: 90px;
+}
 .show-card-container {
   width: 45%;
   text-align: auto;
   padding-bottom: 90px;
-  padding-top: 60px;
+  padding-top: 90px;
   margin: auto;
 }
