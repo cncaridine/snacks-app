@@ -1,82 +1,60 @@
 <!DOCTYPE html>
 <html>
    <% include ../partials/head.ejs %>
-  <body class="center-align">
-    <div class="show-card-container">
-      <h1>Snackz Show Page</h1>
-      <div class="card large">
-        <div class="card-image waves-effect waves-block waves-light">
-          <img class="activator" src="images/office.jpg">
-        </div>
-        <div class="card-content">
-          <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-          <p><a href="#">This is a link</a></p>
-        </div>
-        <div class="card-reveal hoverable">
-          <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-          <p>Here is some more information about this product that is only revealed once clicked on.</p>
+  <body>
+    <div>
+      <div class="show-card-container">
+        <h1>Snackz Show Page</h1>
+        <div class="center-align">
+          <div class="card large">
+            <div class="card-image">
+              <img src="<%=snack.img%>" alt="you cannot see the snack"></br>
+              <span class="card-title grey-text text-darken-4">Continent: <%=snack.continent%> </br><i class="material-icons right">close</i></span>
+            </div>
+            <div class="card-content">
+                Snack: <%=snack.snack%> </br>
+                Snacker: <%=snack.snacker%> </br>
+                Description: <%=snack.description%></br>
+              <% if (snack.like > 0) { %>
+                <form action="/snackz/like/<%=snack._id;%>?_method=PUT" method="POST">
+                  <input class="waves-effect waves-light btn" type="submit" value="LIKE">
+                </form>
+                  <% } else { %>
+                  Be the first to like!
+                <% } %>
+              <form action="/snackz/<%=snack._id; %>?_method=DELETE" method="POST">
+                <input class="waves-effect  red darken-1 btn" type="submit" value="X"/>
+              </form>
+              <a class="waves-effect waves-light btn" href="/snackz/<%=snack.id; %>/edit"><i class="material-icons left">edit</i></a>
+            </div>
+          </div>
+      </div>
+  </body>
+  <footer class="page-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">More from Snackz on Snacks</h5>
+              <p class="grey-text text-lighten-4">Make sure you're not left out from all things snackz on snacks. </p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Links</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="#!">Pod Cast</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Events </a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Join Team</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Contact Us</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Next Snack Highlight</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Next Destination</a></li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-
-
-    <!-- <div class="center-align">
-      <div class="card">
-        <div class="card-image waves-effect waves-block waves-light">
-          <img class="activator" src="<%=snack.img%>" alt="you cannot see the snack"> </br>
-        </div>
-        <div class="card-content">
-          <span class="card-title activator grey-text text-darken-4">Card Title</span>
-        </div>
-        <div class="card-reveal">
-          <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-            Continent: <%=snack.continent%> </br>
-            Snack: <%=snack.snack%> </br>
-            Snacker: <%=snack.snacker%> </br>
-            Description: <%=snack.description%></br>
-          <% if (snack.like > 0) { %>
-            <form action="/snackz/like/<%=snack._id;%>?_method=PUT" method="POST">
-              <input class="waves-effect waves-light btn" type="submit" value="LIKE">
-            </form>
-              <% } else { %>
-              Be the first to like!
-            <% } %>
-          <form action="/snackz/<%=snack._id; %>?_method=DELETE" method="POST">
-            <input class="waves-effect  red darken-1 btn" type="submit" value="X"/>
-          </form>
-          <a class="waves-effect waves-light btn" href="/snackz/<%=snack.id; %>/edit"><i class="material-icons left">edit</i>Edit</a>
-        </div>
-            <! </div> -->
-        <!-- </div>
-      </div>  -->
-
-
-        <footer class="page-footer">
-          <div class="container">
-            <div class="row">
-              <div class="col l6 s12">
-                <h5 class="white-text">More from Snackz on Snacks</h5>
-                <p class="grey-text text-lighten-4">Make sure you're not left out from all things snackz on snacks. </p>
-              </div>
-              <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Links</h5>
-                <ul>
-                  <li><a class="grey-text text-lighten-3" href="#!">Pod Cast</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Events </a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Join Team</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Contact Us</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Next Snack Highlight</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Next Destination</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="footer-copyright">
-            <div class="container">
-            © 2019 Copyright Text
+      <div class="footer-copyright">
+        <div class="container">
+          © 2019 Copyright Text
             <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-            </div>
-          </div>
-        </footer>
-  </body>
+        </div>
+      </div>
+  </footer>
 </html>

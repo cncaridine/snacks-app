@@ -27,6 +27,18 @@ p, h5 {
 .index-container {
   padding-top: 90px;
 }
+
+.create-new {
+  background-color: blue;
+}
+
+.card-title {
+  font-family: 'Concert One', cursive;
+}
+
+.card-content {
+  font-family: 'Poiret One', cursive;
+}
 .show-card-container {
   width: 45%;
   text-align: auto;
