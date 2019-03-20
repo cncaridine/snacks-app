@@ -9,7 +9,7 @@
         <i class="material-icons">close</i>
       </div>
     </form>
-    <nav class="create-new">
+    <nav class="create-new pulse">
       <a href="/snackz/new">Create a New Snack</a>
     </nav>
     <div class="center-align" id="index-container">
@@ -19,7 +19,6 @@
           <ul>
             <% for(let i = 0; i < snacks.length; i++) { %>
                 <li class="index-pic">
-                  <!-- <a href="/snackz/<%=snacks[i]._id%>"><%=snacks[i].continent %></a> -->
                   <a href="/snackz/<%=snacks[i]._id%>">
                   <img class="circle responsive-img hoverable" id="contentPic" src="<%=snacks[i].img%>" alt="you cannot see the snack"></a></br>
                 </li>
@@ -34,7 +33,7 @@
         <div class="row">
           <div class="col l6 s12">
             <h5 class="white-text">More from Snackz on Snacks</h5>
-              <p class="grey-text text-lighten-4">Make sure you're not left out from all things snackz on snacks. </p>
+              <p class="grey-text text-lighten-4">Make sure you're not left out from all things snackz on snacks. Snackz on Snacks is always on the hunt the newest snackz and collecting passport stamps.</p>
           </div>
           <div class="col l4 offset-l2 s12">
             <h5 class="white-text">Links</h5>
