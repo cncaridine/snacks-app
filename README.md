@@ -36,12 +36,3 @@ This app targets folks that have a combined love of travel and food to have a sp
 * Mongoose
 * Express
 * EJS
-
-## Resources
-https://github.com/axios/axios#axios-api
-
-https://www.udemy.com/mern-stack-front-to-back/learn/v4/t/lecture/10055492?start=0
-
-https://github.com/axios/axios#axios-api
-
-https://hashnode.com/post/react-tutorial-using-mern-stack-ciiyus9m700qqge53mer0isxz
