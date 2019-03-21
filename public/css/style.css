@@ -10,7 +10,7 @@ main {
 }
 
 img {
-  width: 45%;
+  width: 50%;
 }
 
 h1 {
@@ -28,6 +28,7 @@ p, h5 {
 input {
   color: #ffb300;
 }
+
 .index-container {
   padding-top: 90px;
 }
@@ -61,7 +62,7 @@ h3 {
   font-family: 'Poiret One', cursive;
 }
 .show-card-container {
-  width: 45%;
+  width: 50%;
   text-align: auto;
   padding-bottom: 90px;
   padding-top: 90px;
