@@ -31,7 +31,6 @@ This app targets folks that have a combined love of travel and food to have a sp
 * CSS
 * Materialize
 * JavaScript
-* jQuery
 * Node.js
 * Mongoose
 * Express
