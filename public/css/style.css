@@ -67,7 +67,7 @@ h3 {
 
 .new-background {
   background-color: black;
-  opacity: .8;
+  opacity: 1;
 }
 
 .edit-form {
@@ -93,10 +93,7 @@ h3 {
 }
 
 .edit-header {
-  background-image: url("https://images-na.ssl-images-amazon.com/images/I/51A-EqjSp4L._SY355_.jpg");
-  background: fixed;
   color:  #ffb300;
-  height: 30vh;
 }
 
 .new-container {
