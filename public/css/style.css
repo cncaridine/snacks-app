@@ -25,6 +25,9 @@ p, h5 {
   font-family: 'Poiret One', cursive;
 }
 
+input {
+  color: #ffb300;
+}
 .index-container {
   padding-top: 90px;
 }
@@ -85,6 +88,9 @@ h3 {
   font-size: large;
 }
 
+.form-new-snack {
+  color: #ffb300;
+}
 #edit-container {
   text-align: center;
   padding-bottom: 90px;
