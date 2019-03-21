@@ -2,6 +2,8 @@
 
 ## Creator
 Cori Caridine
+[Portfolio](https://corincaridine.wordpress.com/)
+[LinkedIn](https://www.linkedin.com/in/corincaridine/)
 
 ## Site
 https://snacksonsnacks-app.herokuapp.com/snackz
